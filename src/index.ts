@@ -1,4 +1,4 @@
-import { buildSuffix, isUpperCase, isVowel } from "./utils";
+import { buildSuffix, isUpperCase, isVowel, EXAMPLES } from "./utils";
 
 const translateWord = (word: string): string => {
   const suffix = buildSuffix(word);
@@ -27,7 +27,7 @@ const translateWord = (word: string): string => {
   return translatedWord;
 };
 
-const translateSentence = (sentence: string): string => {
+export const translateSentence = (sentence: string): string => {
   if (sentence.length === 0) return sentence;
 
   const words = sentence.split(/\b/);
@@ -37,23 +37,7 @@ const translateSentence = (sentence: string): string => {
 };
 
 (function main() {
-  console.log(`Original Sentence: Stop - Translated Sentence: ${translateSentence("Stop")}`);
-  console.log(
-    `Original Sentence: No littering - Translated Sentence: ${translateSentence("No littering")}`,
-  );
-  console.log(
-    `Original Sentence: No shirts, no shoes, no service - Translated Sentence: ${translateSentence(
-      "No shirts, no shoes, no service",
-    )}`,
-  );
-  console.log(
-    `Original Sentence: No persons under 14 admitted - Translated Sentence: ${translateSentence(
-      "No persons under 14 admitted",
-    )}`,
-  );
-  console.log(
-    `Original Sentence: Hey buddy, get away from my car! - Translated Sentence: ${translateSentence(
-      "Hey buddy, get away from my car!",
-    )}`,
-  );
+  for (const sentence of EXAMPLES) {
+    console.log(`Original Sentence: ${sentence} - Translated Sentence: ${translateSentence(sentence)}`);
+  }
 })();
