@@ -4,7 +4,7 @@ import { translateSentence } from "../src"
 import { EXAMPLE_PHRASES } from './mocks/example';
 
 
-describe("Translator", () =>{
+describe("Translator", () => {
   it("should translate the sentences", () => {
     for (const example of EXAMPLE_PHRASES) {
       const translatedSentence = translateSentence(example.original);
