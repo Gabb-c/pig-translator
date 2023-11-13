@@ -64,7 +64,7 @@ export const translateSentence = (sentence: string): string => {
   // Iterate through example sentences and display the original and translated versions
   for (const sentence of EXAMPLES) {
     console.log(
-      `Original Sentence: ${sentence} - Translated Sentence: ${translateSentence(sentence)}`,
+      `Original Sentence: ${sentence} | Translated Sentence: ${translateSentence(sentence)}`,
     );
   }
 })();
