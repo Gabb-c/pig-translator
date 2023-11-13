@@ -1,6 +1,22 @@
 ## Pig Language Translator
 
-This is a repository for a  live code interview. Down below I will provide the description, the features of this project and how to run the tests and the program itself.
+This repository hosts a simple Pig Latin translator, developed as part of a live code interview. The project includes features such as the latest TypeScript integration, unit tests using Vitest, linting with Biome.js, and clean code with comments.
+
+## Table of Contents
+
+- [Pig Language Translator](#pig-language-translator)
+- [Table of Contents](#table-of-contents)
+- [Tests and how to run the program](#tests-and-how-to-run-the-program)
+- [Part One](#part-one)
+  - [Description](#description)
+  - [Translation rules](#translation-rules)
+  - [Assignment](#assignment)
+  - [Sample session](#sample-session)
+- [Part Two](#part-two)
+  - [Description](#description-1)
+  - [Translation Rules](#translation-rules-1)
+  - [Assignment](#assignment-1)
+  - [Sample session](#sample-session-1)
 
 ## Tests and how to run the program
 
@@ -18,13 +34,6 @@ pnpm test:ui
 pnpm dev
 ```
 
-## Features
-
-  - Latest TypeScript
-  - Unit tests with Vitest
-  - Linting with Biome.js
-  - Clean code with comments
-
 ## Part One 
 
 ### Description
@@ -35,19 +44,11 @@ The rules to translate any English word to this foreign language are listed belo
 
 ### Translation rules
 
-Separate each word into two parts. The first part is called the “prefix” and extends from the beginning of the word
-up to, but not including, the first vowel (The letter “y” will be considered a
-vowel). The rest of the word is called the “stem”.
-
-The translated text is formed by switching the order of the prefix and the stem, and
-adding the letters “ay” to the end. For example, “sandwich” is composed of “s” + “andwich” and translates into “andwichsay”, which is “andwich” + “s” + “ay”.
+Separate each word into two parts: the "prefix" and the "stem." The translated text is formed by switching the order of the prefix and the stem, adding the letters "ay" to the end.
 
 ### Assignment
 
-Your task is to write a simple program in 20 min to perform basic English to this foreign
-language translation. Your program does not need to expect inputs from the user. Create a
-function that makes the translation and call it using your own code.
-
+Write a program to perform basic English to this foreign language translation within a 20-minute timeframe. Create a function for translation and call it in your code.
 
 ### Sample session
 
@@ -78,22 +79,18 @@ Output: awayay
 
 ### Description
 
-The same group of researchers have discovered later that the sentence structure is very similar
-to English and that specific words need to be translated under different conditions. They now
-require a program to translate English sentences into this ancient text. The rules to translate any
-sentence in English to this foreign language are listed below.
+Researchers have found that the sentence structure is similar to English, and specific words need to be translated under different conditions. A program is needed to translate English sentences into this ancient text.
 
 ### Translation Rules
 
 1. If a word has no letters, don't translate it.
-2. All punctuation should be preserved.
-3. If the word begins with a capital letter, then the translated word should too.
-4. If the word contains no consonants, let the prefix be empty and the word be the stem. The word ending should be “yay” instead of merely “ay”. For example, “I” would be “Iyay”
+2. Preserve all punctuation.
+3. If the word begins with a capital letter, the translated word should too.
+4. If the word contains no consonants, let the prefix be empty, and the word be the stem. The word ending should be "yay" instead of merely "ay."
 
 ### Assignment
 
-Your task is to adapt the program you wrote in half an hour to fulfill these new requirements 
-to perform sentence translation from English to this foreign language.
+Adapt the program to fulfill new requirements for sentence translation from English to this foreign language.
 
 ### Sample session
 
