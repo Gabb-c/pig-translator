@@ -43,7 +43,7 @@ const translateWord = (word: string): string => {
  * Translate a sentence from English to the Pig Language.
  *
  * @param {string} sentence - The English sentence to translate.
- * @returns {string} The translated sentence in Pig Language.
+ * @returns {string} The translated sentence in the Pig Language.
  */
 export const translateSentence = (sentence: string): string => {
   // If the sentence is empty, return it unchanged
