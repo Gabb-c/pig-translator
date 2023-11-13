@@ -31,8 +31,8 @@ const isVowel = (letter: string): boolean => VOWELS.includes(letter.toLowerCase(
  * @returns {"ay"|"yay"} The determined suffix.
  */
 const buildSuffix = (word: string): "ay" | "yay" => {
-  // Convert the word to an array of characters and check if any are vowels
-  const hasVowel = Array.from(word).some(isVowel);
+  // Convert the word to an array of characters and check if any are not vowels
+  const hasVowel = Array.from(word).some((char) => !isVowel(char));
   return hasVowel ? "ay" : "yay";
 };
 
