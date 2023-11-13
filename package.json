@@ -7,6 +7,8 @@
     "dev": "tsx watch src/index.ts",
     "format": "biome format --write src",
     "lint:fix": "biome check --apply-unsafe ./src",
+    "lint:ci": "biome ci src",
+    "lint:tsc": "tsc --extendedDiagnostics",
     "test:coverage": "vitest run --coverage",
     "test:dev": "vitest -w",
     "test:ui": "vitest --ui --api 9527"
