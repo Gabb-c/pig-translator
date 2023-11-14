@@ -7,6 +7,9 @@ import { EXAMPLES, buildSuffix, isUpperCase, isVowel } from "./utils";
  * @returns {string} The translated word in Pig Language.
  */
 const translateWord = (word: string): string => {
+  // If the word doesn't contain alphabetic characters, return it unchanged
+  if (!/[a-zA-Z]/.test(word)) return word;
+  
   // Build the suffix for the translation
   const suffix = buildSuffix(word);
   let prefix = "";
@@ -27,9 +30,6 @@ const translateWord = (word: string): string => {
     stem = word;
     prefix = "";
   }
-
-  // If the word doesn't contain alphabetic characters, return it unchanged
-  if (!/[a-zA-Z]/.test(word)) return word;
 
   // Build the translated word based on the translation rules
   const translatedWord = isUpperCase(word[0])
